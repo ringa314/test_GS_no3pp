@@ -53,6 +53,9 @@ __The four scripts below (figS*.m) are used to generate Figures S1 to S4 in the 
   
   Information used by all the MATLAB scripts __*.m__ to specify parameters used for creating figures
   
+* __add_coast.m__
+
+  Adds coastline and state boundaries to map figures
   
 ## 3. Data
 __All the data used for figure generation can be found in the _"./MSdata"_ folder__
