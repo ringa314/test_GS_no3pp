@@ -14,13 +14,13 @@ __The four scripts below (fig*.m) are used to generate Figures 1 to 4 in the pap
   
 * __fig2_glider_prof.m__
   
-  __Figure 2:__ (a-c) _In situ_ temperature and density measurements and OfES-derived nitrate flux at the EUS shelf break between [TIME];
-  (d-f) Temperature, density, and nitrate flux depth profiles between [TIME]; (g-i) Temperature, density, and nitrate flux depth profiles between [TIME]
+  __Figure 2:__ (a-c) _In situ_ temperature and chlorophyll-a measurements at the southeastern shelf break between [TIME];
+  (d-f) Temperature and chlorophyll depth profiles between [TIME]; (g-i) Temperature, density, and nitrate flux depth profiles between [TIME]
   
 * __fig3_yearmon.m__
 
   __Figure 3:__ (a) A year-month plot of the OfES-derived nitrate flux anomaly at the EUS shelf break at [DEPTH] between years 1992-2023;
-  (b) A year-month plot of the [PRODUCT] surface NPP on the EUS outer shelf between years 2002-2023
+  (b) A year-month plot of the VGPM surface NPP on the EUS outer shelf between years 2002-2023
   
 * __fig4_regress.m__
   
