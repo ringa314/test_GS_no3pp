@@ -6,14 +6,45 @@
 %###################
 %## Variable Info ##
 %###################
-regions  = {'CAL','EUS'};                   % study regions for comp
+regions  = {'CAL', 'California Upwelling Zone'; ...
+            'EUS', 'Southeastern Shelf Upwelling Zone'};            % study regions for comp
 OSUprods = {'cbpm','vgpm','eppley','cafe'}; % npp products
 WVELprods= {'OfES' ,'3d';'ECCO2','1d'};     % wvel products
 NOSU = length(OSUprods);                    % number of npp products
-GLinfo = {'sp062_20211014T1515', [datenum(2021,11,15) datenum(2021,11,28)],[0.95 0.60 0.48],[-77.1 33.5]; ... % Glider tracks
-          'sp065_20221116T1552', [datenum(2022,12, 7) datenum(2022,12,19)],[0.65 0.16 0.95],[-78.25 32.8];
-          'sp066_20241106T1639', [datenum(2024,12,10) datenum(2024,12,17)],[0.88 0.86 0.215],[-77.4 33.13]};
-
+GLinfo = {        %  'sp065_20240214T1520', 'sp062_20220623T1419', not crop the 300 m isobath
+  'sp062_20211014T1515', datenum(2021,11,[15 28  ]), [0.95 0.60 0.48],1;
+  'sp062_20211014T1515', datenum(2021,11,[27 32  ]), [0.95 0.60 0.48],0; 
+  'sp062_20211014T1515', datenum(2021,12,[ 7 11  ]), [0.95 0.60 0.48],1;
+  'sp065_20221116T1552', datenum(2022,12,[ 6 16  ]), [0.65 0.16 0.95],1;
+  'sp065_20221116T1552', datenum(2022,12,[16 21.6]), [0.65 0.16 0.95],0;
+  'sp065_20221116T1552', datenum(2022,12,[24 29  ]), [0.65 0.16 0.95],1;
+  'sp007_20230208T1524', datenum(2023,02,[28 34  ]), [0    0.9  0.2 ],1;
+  'sp007_20230208T1524', datenum(2023,03,[ 6  9.5]), [0    0.9  0.2 ],0;
+  'sp071_20231220T1541', datenum(2024,01,[10 17  ]), [0    0    1   ],0;   % longitudinal (0) and latitudinal (1) winter profiles 
+  'sp071_20231220T1541', datenum(2024,02,[11 15  ]), [0    0    1   ],1;
+  'sp070_20240912T1432', datenum(2024,10,[16 21  ]), [0    0    1   ],0;
+  'sp070_20240912T1432', datenum(2024,11,[ 0  5  ]), [0    0    1   ],1;
+  'sp066_20241106T1639', datenum(2024,12,[ 0  8  ]), [0.25 0.00 0.25],0;
+  'sp066_20241106T1639', datenum(2024,12,[11 16  ]), [0.25 0.00 0.25],1;
+  'sp066_20241106T1639', datenum(2024,12,[16 21  ]), [0.25 0.00 0.25],0;
+  'sp066_20241106T1639', datenum(2024,12,[28 34  ]), [0.25 0.00 0.25],1;
+  'sp065_20210616T1430', datenum(2021,07,[ 8 18]), [1 0.1 0.1],1;
+  'sp065_20210616T1430', datenum(2021,07,[18 24]), [1 0.1 0.1],0;    % longitudinal (0) and latitudinal (1) summer profiles
+  'sp007_20210818T1548', datenum(2021,09,[15 21]), [1 0.1 0.5],1;
+  'sp007_20210818T1548', datenum(2021,09,[21 24]), [1 0.1 0.5],0;  
+  'sp070_20220824T1510', datenum(2022,09,[27 32]), [0 1   0  ],1;
+  'sp070_20220824T1510', datenum(2022,10,[ 1  7]), [0 1   0  ],0;
+  'sp062_20230823T1452', datenum(2023,09,[20 26]), [0 0.2 0.9],1;
+  'sp062_20230823T1452', datenum(2023,09,[25 31]), [0 0.2 0.9],0;
+  'sp062_20230823T1452', datenum(2023,10,[ 5 11]), [0 0.2 0.9],1;
+  'sp069_20240703T1534', datenum(2024,08,[ 3 10]), [1 0   0  ],1};
+Fvars = {'mask2D_nflux','mask2D_nflux_flt', ...
+         'mask3D_nflux','mask3D_nflux_flt'};     % nflux variables for regression analysis
+Ovars = {'npp','npp_flt'};                       % npp variables for regression analysis
+Gvars = {'chl','chl_flt'};                       % chl variables
+Finfo = {'F_{NV}'       ;'(mg N/m^2/day)';'F_{NV} (mg N/m^2/day)' ;{'F_{NV}';'(mg N/m^2/day)'}};
+Oinfo = {'NPP'          ;'(mg C/m^2/day)';'NPP (mg C/m^2/day)'    ;{'NPP';'(mg C/m^2/day)'}};
+Ginfo = {'Chlorophyll a';'(mg/m^3)'      ;'Chlorophyll a (mg/m^3)';{'Chlorophyll a';'(mg/m^3)'}};
 %######################
 %## file directories ##
 %######################
@@ -45,7 +76,7 @@ fpfx_W    = [fdir_data 'RRR_W'];           % Regional WVEL
 % fW        = [fdir_data_OfES 'RRR_WXd_PPPP.nc']; % Regional WVEL
 fnpp      = [fdir_data 'RRR_npp_PPPP.nc']; % Regional npp
 % colormaps
-fcmap     = [fdir_data 'cmap_br64.mat'];           % blue-to-red colormap
+fcmap     = [fdir_data 'cmap_br64.mat'];           % npp chl colormap
 
 %###############
 %## grid info ##
@@ -53,7 +84,7 @@ fcmap     = [fdir_data 'cmap_br64.mat'];           % blue-to-red colormap
 % Region 1: East US Shelf
 EUS.fcuts = [5:0.1:7]*0.1; % cutoff frequency of upwelling occurrence (0~1)
 EUS.zmax  = 1100;          % max resolved depth
-EUS.zref = -50;           % representative depth
+EUS.zref = -300;           % representative depth
 EUS.fref = 0.55;           % reference frequency to gauge upwelling
 EUS.lat  =  [25   38];     % area for data extraction
 EUS.lon  =  [-85 -74];   
@@ -118,14 +149,18 @@ mis_val = 0;
 %################
 %## parameters ##
 %################
-GRAV = 9.8;          % gravitational acceleration
-rho0 = 1023.6;       % seawater density
-Re = 6.378E6;        % equatorial radius of Earth in meters
-cff_deg2m = 2*pi*Re./360;% 1 deg at equator in meter
-cff_day2sec = 86400;     % 1 day = 86400 s
-cff_mol2gN = 14;         % 1mol N = 14g N
-cff_micro2milli = 1E-3;  % 1 micro = 1e-3 milli
-cff_cm2m = 1E-2;     % 1 cm = 1E-2 m
+GRAV = 9.8;               % gravitational acceleration (unti: m/s^2)
+Re   = 6.378E6;           % equatorial radius of Earth (unit: m)
+rho0 = 1023.6;            % seawater density (kg/m^3)
+cff_day2sec = 86400;      % 1 day -> 86400 secs
+cff_mol2gN = 14;          % 1 molN -> 14g N 
+cff_mol2gC = 12;          % 1 molC -> 12g C
+cff_molN2C = 106/16;      % Redfield ratio C:N = 106:16
+cff_micro2milli = 1E-3;   % 1 micro- = 1E-3 milli-
+%cff_kilo2milli = 1E6;
+cff_deg2m= 2*pi*Re./360;  % 1 deg at equater in meter
+cff_cm2m = 1E-2;          % 1 cm = 10^-2 m
+cff_FNV2Funit = cff_day2sec*cff_micro2milli*cff_mol2gN; % FNV umolN/m2/sec -> mgN/m2/day
 
 %#####
 % misc
