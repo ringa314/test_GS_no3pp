@@ -6,16 +6,17 @@ __Contact information:__ The [Computational Oceanography Lab](https://sites.udel
 
 ## 1. Main Code
 > ```
+__All the main code scripts are found in the _"/mfiles"_ folder__
 __The four scripts below (fig*.m) are used to generate Figures 1 to 4 in the paper's main text__
 * __fig1_map.m__
   
-  __Figure 1:__ (a) Map showing upwelling occurrence frequency in the EUS region from the OfES dataset, identifying the outer shelf region and off-shelf upwelling region;
+  __Figure 1:__ (a) Map showing upwelling occurrence frequency in the southeast shelf region from the OfES dataset, identifying the outer shelf region and off-shelf upwelling region;
   (b) Map of three WHOI glider paths that pass through the study region during the bloom season to take _in situ_ measurements shown in Figure 2
   
 * __fig2_glider.m__
   
-  __Figure 2:__ (a-c) _In situ_ temperature and chlorophyll-a measurements at the southeastern shelf break between [TIME];
-  (d-f) Temperature and chlorophyll depth profiles between [TIME]; (g-i) Temperature, density, and nitrate flux depth profiles between [TIME]
+  __Figure 2:__ (a-c) _In situ_ temperature and chlorophyll-a measurements in the Northern section of the southeastern shelf break;
+  (d-f) Temperature and chlorophyll depth profiles in the central part of the study region; (g-i) Temperature, and chlorophyll depth profiles in the Southern part of the study region
   
 * __fig3_yearmon.m__
 
@@ -30,16 +31,16 @@ __The four scripts below (fig*.m) are used to generate Figures 1 to 4 in the pap
 __The four scripts below (figS*.m) are used to generate Figures S1 to S4 in the supplementary information__
 * __figS1_regions.m__
 
-  __Figure S1:__ Map comparing surface NPP from the [PRODUCT] dataset in (a) the California region and (b) the EUS region
+  __Figure S1:__ Map comparing surface NPP from the VGPM dataset and chlorophyll-a from the GlobColour dataset in (a/c) the California region and (b/d) the southeast shelf region
   
 * __figS2_wvel.m__
   
-  __Figure S2:__ (a) 
+  __Figure S2:__ (a) Map comparing the mean and standard deviation of vertical velocity from the OfES dataset in (a/c) the California region and (b/d) the southeast shelf region
 
 * __figS3_tser.m__
   
   __Figure S3:__ (a-b) Time series of OfES-derived nitrate flux at [DEPTH] between 1992-2023 and [MODEL] NPP between 2002-2023 in the California region;
-  (c-d) Time series of OfES-derived nitrate flux at [DEPTH] between 1992-2023 and surface [MODEL] NPP between 2002-2023 in the EUS region;
+  (c-d) Time series of OfES-derived nitrate flux at [DEPTH] between 1992-2023 and surface [MODEL] NPP between 2002-2023 in the southeast shelf region;
   
 * __figS4_glider_offszn.m__
 
@@ -58,7 +59,7 @@ __The four scripts below (figS*.m) are used to generate Figures S1 to S4 in the 
   Adds coastline and state boundaries to map figures
   
 ## 3. Data
-__All the data used for figure generation can be found in the _"./MSdata"_ folder__
+__All the data used for figure generation can be found in the _"/MSdata"_ folder__
 * __cmap_NCP.mat__
   
   The RGB data used by __fig1_O2Ar_hist_map_yearly.m__ and __fig2_NCP_yr_map.m__ to create a self-designed _NCP_ colormap
