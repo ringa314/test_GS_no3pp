@@ -60,9 +60,52 @@ __The four scripts below (figS*.m) are used to generate Figures S1 to S4 in the 
   
 ## 3. Data
 __All the data used for figure generation can be found in the _"/MSdata"_ folder__
-* __cmap_NCP.mat__
+* __cmap_bathy12.mat__
   
   The RGB data used by __fig1_O2Ar_hist_map_yearly.m__ and __fig2_NCP_yr_map.m__ to create a self-designed _NCP_ colormap
 
+* __cmap_br64.mat__
+  
+  The RGB data used by __fig1_O2Ar_hist_map_yearly.m__ and __fig2_NCP_yr_map.m__ to create a self-designed _NCP_ colormap
+
+* __cmap_chla.mat__
+  
+  The RGB data used by __fig1_O2Ar_hist_map_yearly.m__ and __fig2_NCP_yr_map.m__ to create a self-designed _NCP_ colormap
+
+* __cmap_npp.mat__
+  
+  The RGB data used by __fig1_O2Ar_hist_map_yearly.m__ and __fig2_NCP_yr_map.m__ to create a self-designed _NCP_ colormap
+
+* __cmap_temp.mat__
+  
+  The RGB data used by __fig1_O2Ar_hist_map_yearly.m__ and __fig2_NCP_yr_map.m__ to create a self-designed _NCP_ colormap
+
+* __fig1.mat__
+  
+  The RGB data used by __fig1_O2Ar_hist_map_yearly.m__ and __fig2_NCP_yr_map.m__ to create a self-designed _NCP_ colormap
+
+* __fig2.mat__
+  
+  The RGB data used by __fig1_O2Ar_hist_map_yearly.m__ and __fig2_NCP_yr_map.m__ to create a self-designed _NCP_ colormap
+
+* __fig3.mat__
+  
+  The RGB data used by __fig1_O2Ar_hist_map_yearly.m__ and __fig2_NCP_yr_map.m__ to create a self-designed _NCP_ colormap
+
+* __fig4.mat__
+  
+  The RGB data used by __fig1_O2Ar_hist_map_yearly.m__ and __fig2_NCP_yr_map.m__ to create a self-designed _NCP_ colormap
+
+* __figS1.mat__
+  
+  The RGB data used by __fig1_O2Ar_hist_map_yearly.m__ and __fig2_NCP_yr_map.m__ to create a self-designed _NCP_ colormap
+
+* __figS2.mat__
+  
+  The RGB data used by __fig1_O2Ar_hist_map_yearly.m__ and __fig2_NCP_yr_map.m__ to create a self-designed _NCP_ colormap
+
+* __figS3.mat__
+  
+  The data used by __figs3_tser.m__ to create plots of the VGPM, CbPM,
 ## Acknowledgment
 
