@@ -82,30 +82,31 @@ __All the data used for figure generation can be found in the _"/MSdata"_ folder
 
 * __fig1.mat__
   
-  The data used by __fig1_map.m__
+  The data used by __fig1_map.m__ to create Figure 1, including spatially resolved upwelling frequency occurrence from the OfES product, bathymetry and a mask of the mid- and outer-shelf region from the VGPM product, and spatially resolved glider tracks from the ERRDAP database
 
 * __fig2.mat__
   
-  The data used by __fig2_glider.m__ to create a self-designed _NCP_ colormap
+  The data used by __fig2_glider.m__ to create Figure 2, including depth profiles of chlorophyll-a and temperature from three gliders from the ERRDAP database
 
 * __fig3.mat__
   
-  The data used by __fig3_yearmon.m__ to create a self-designed _NCP_ colormap
+  The data used by __fig3_yearmon.m__ to create Figure 3, including temporally resolved OfES- and WOA-derived _Fnv_ anomaly and VGPM _NPP_ anomaly
 
 * __fig4.mat__
   
-  The data used by __fig4_reg.m__ to create a self-designed _NCP_ colormap
+  The data used by __fig4_reg.m__ to create Figure 4, including seasonal mean OfES- and WOA-derived _Fnv_ anomaly at a selected depth and seasonal mean surface NPP anomaly from the OSU VGPM product, as well as depth-resolved temporally averaged _Fnv_ and vertical volume flux from the OfES product
 
 * __figS1.mat__
   
-  The data used by __figS1_regions.m__ to create a self-designed _NCP_ colormap
+  The data used by __figS1_regions.m__ to create Figure S1, including spatially resolved mean chlorophyll-a from the ERRDAP database and mean _NPP_ from the OSU VGPM product
 
 * __figS2.mat__
   
-  The data used by __figS2_wvel.m__ to create a self-designed _NCP_ colormap
+  The data used by __figS2_wvel.m__ to create Figure S2, including spatially resolved mean and standard deviations of the upwelling occurrence frequency from the OfES product
 
 * __figS3.mat__
   
-  The data used by __figS3_tser.m__ to create plots of the VGPM, CbPM,
+  The data used by __figS3_tser.m__ to create Figure S2, including a time series of the OfES- and WOA-derived _Fnv_ anomaly from 1992-2024, and a time series of _NPP_ anomaly from the OSU VGPM, CbPM, and Eppley-VGPM products from 2002-2023
+  
 ## Acknowledgment
 
