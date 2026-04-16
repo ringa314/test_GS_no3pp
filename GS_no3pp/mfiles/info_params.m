@@ -50,7 +50,7 @@ Ginfo = {'Chlorophyll a';'(mg/m^3)'      ;'Chlorophyll a (mg/m^3)';{'Chlorophyll
 %######################
 % project data directory
 fdir_data = '../MSdata/';                        % main directory for file achive
-fdir_data_OfES = '/home/yunli/papers/2025_HUNT/data/'; % only shows up in info_params
+%fdir_data_OfES = '/home/yunli/papers/2025_HUNT/data/';
 fetopo        = [fdir_data 'etopo1_ice_g_i2.bin'];               % ETOPO1 Bathymetry file
 fcoast        = [fdir_data 'gshhs_i.b'];                          % file of coastline: f/h/i/c=fine,hi,interm,coarse
 fstate        = [fdir_data 'cb_2018_us_state_500k.shp'];      % file state borders
@@ -65,11 +65,11 @@ fpfx_cafe      = '/data/NPP_OSU_20231016/cafe_4320x2160/cafe.';    % prefix for 
 fpfx_cbpm      = '/data/NPP_OSU_20231016/cbpm_4320x2160/cbpm.';    % prefix for Cbpm hdf file names
 fpfx_vgpm      = '/data/NPP_OSU_20231016/vgpm_4320x2160/vgpm.';    % prefix for Vgpm hdf file names
 fpfx_eppley    = '/data/NPP_OSU_20231016/eppley_4320x2160/eppley.';% prefix for Eppley hdf file names
-fpfx_gld      = [fdir_data_OfES 'GLIDER/'];                            % prefix for glider mat files
+fpfx_gld      = [fdir_data 'GLIDER/'];                            % prefix for glider mat files
 % derived datasets 
-fgrd_OSU  = [fdir_data_OfES 'RRR_grid_OSU.mat'];% OSU grid for selected region 
+fgrd_OSU  = [fdir_data 'RRR_grid_OSU.mat'];% OSU grid for selected region 
 fgrd_all  = [fdir_data 'RRR_grid.mat'];   % OSU+OfES+ECCO2 grids for selected region
-fgrd_coast= [fdir_data_OfES 'RRR_coast.mat'];   % coastlines for selected region
+fgrd_coast= [fdir_data 'RRR_coast.mat'];   % coastlines for selected region
 fpfx_T    = [fdir_data 'RRR_T'];           % Regional Temperature
 fpfx_W    = [fdir_data 'RRR_W'];           % Regional WVEL
 % fT        = [fdir_data_OfES 'RRR_TXd_PPPP.nc']; % Regional Temperature % replace in step51 and step23
