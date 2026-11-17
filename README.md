@@ -10,13 +10,14 @@ __All the main code scripts are found in the _"/mfiles"_ folder__
 __The four scripts below (fig*.m) are used to generate Figures 1 to 4 in the paper's main text__
 * __fig1_map.m__
   
-  __Figure 1:__ (a) Map showing upwelling occurrence frequency in the southeast shelf region from the OfES dataset, identifying the outer shelf region and off-shelf upwelling region;
-  (b) Map of three WHOI glider paths that pass through the study region during the bloom season to take _in situ_ measurements shown in Figure 2
+  __Figure 1:__ (a) Map showing mean NPP and (b) chlorophyll a in the southeast shelf region from the OfES dataset, identifying the outer shelf region and two WHOI glider paths that pass through the study region to take _in situ_ measurements;
+  (c-d) _In situ_ temperature and chlorophyll-a measurements along two transects of the southeastern shelf break;
   
 * __fig2_glider.m__
   
-  __Figure 2:__ (a-c) _In situ_ temperature and chlorophyll-a measurements in the Northern section of the southeastern shelf break;
-  (d-f) Temperature and chlorophyll depth profiles in the central part of the study region; (g-i) Temperature, and chlorophyll depth profiles in the Southern part of the study region
+  __Figure 2:__ (a) Map of upwelling occurrence frequency in the southeast shelf region 1980-2025;
+  (b) A depth profile showing mean vertical velocity in the off-shelf upwelling region 1980-2025;
+  (c) A depth profile over 45 years of vertical velocity anomalies in the upwelling region;
   
 * __fig3_yearmon.m__
 
